@@ -9,7 +9,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
 
 # Download v7.38 of Drupal into /app
 RUN rm -fr /app && mkdir /app && cd /app && \
-  curl -fSL "https://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz && \
+  curl -fSL "https://ftp.drupal.org/files/projects/drupal-7.38.tar.gz" -o drupal.tar.gz && \
   tar -xzvf drupal-7.38.tar.gz && \
   rm drupal-7.38.tar.gz && \
   mv drupal-7.38/* drupal-7.38/.htaccess ./ && \
